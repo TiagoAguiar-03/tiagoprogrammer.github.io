@@ -1,0 +1,66 @@
+@charset "UTF-8";
+
+:root {
+    --color-1: #173545;
+    --color-2: #DEDB81;
+    --color-3: #3F7591;
+    --color-4: #DE6A74;
+    --color-5: #54AFDE;
+    --color-dark: #2D2D2D;
+    --color-white: #e9e9e9;
+}
+
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    height: 100%;
+    background-color: var(--color-5) !important;
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+
+main {
+    width: 100%;
+    height: auto;
+    background-color: var(--color-3);
+}
+
+p {
+    font-size: 1.09em;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+ul {
+    color: var(--color-dark);
+    list-style: none;
+}
+
+.img-profile {
+    width: 150px;
+    height: 150px;
+}
+
+.img-projects {
+    width: 40%;
+    height: 50%;
+}
+
+.projects {
+    background-color: var(--color-1);
+}
+
+.color-dark {
+    color: var(--color-dark) !important;
+}
+
+
+.color-white {
+    color: var(--color-white) !important;
+}
+
+/*RESPONSIVIDADE*/
