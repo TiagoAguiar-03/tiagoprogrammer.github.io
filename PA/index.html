@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Progressão Aritimética</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="bg-light text-center container d-flex flex-wrap">
+
+        <div class="mx-3 flex-fill mb-5">
+            <h1>P.A</h1>
+            <label for="inicial" class="form-label fs-5">Termo inicial</label>
+            <input id="inicial" type="number" class="form-control">
+            <br>
+            <label for="razao" class="form-label fs-5">Razão da P.A</label>
+            <input id="razao" type="number" class="form-control">
+            <br>
+            <label for="termo" class="form-label fs-5">Termo final</label>
+            <input id="termo" type="number" class="form-control">
+            <br>
+            <button onclick="PA()" class="btn btn-success">Resultado</button>
+            <hr>
+        </div>
+
+        <div class="mx-3 flex-fill mb-5">
+            <h1>P.A soma</h1>
+            <label for="inicialT" class="form-label fs-5">Primeiro termo</label>
+            <input id="inicialT" type="number" class="form-control">
+            <br>
+            <label for="ultimoT" class="form-label fs-5">Ultimo valor da P.A</label>
+            <input id="ultimoT" type="number" class="form-control">
+            <br>
+            <label for="totalT" class="form-label fs-5">Total de termos</label>
+            <input id="totalT" type="number" class="form-control">
+            <br>
+            <button onclick="PAs()" class="btn btn-success">Resultado</button>
+            <hr>
+        </div>
+
+        <div class="mx-3 flex-fill mb-5">
+            <h1>P.A médio</h1>
+            <label for="primeiroT" class="form-label fs-5">Primeiro termo</label>
+            <input id="primeiroT" type="number" class="form-control">
+            <br>
+            <label for="ultimoT2" class="form-label fs-5">Ultimo valor da P.A</label>
+            <input id="ultimoT2" type="number" class="form-control">
+            <br>
+            <button onclick="PAm()" class="btn btn-success">Resultado</button>
+            <hr>
+        </div>
+    </div>
+    <script>
+        function PA() {
+            var valor = parseInt(document.getElementById('inicial').value);
+            var razao = parseInt(document.getElementById('razao').value);
+            var termo = parseInt(document.getElementById('termo').value);
+            var pa = '';
+
+            for (var count = 1; count <= termo; count++) {
+                pa += "<p>Termo " + count + " = " + valor + "</p>";
+                valor += razao;
+            }
+            document.write(pa);
+        }
+
+        function PAs() {
+            var inicialT = parseInt(document.getElementById('inicialT').value);
+            var ultimoT = parseInt(document.getElementById('ultimoT').value);
+            var totalT = parseInt(document.getElementById('totalT').value);
+            var pa = '';
+
+            result = [(inicialT + ultimoT) * totalT] /2; 
+            document.write(result);
+        }
+
+        function PAm() {
+            var primeiroT = parseInt(document.getElementById('primeiroT').value);
+            var ultimoT = parseInt(document.getElementById('ultimoT2').value);
+            var pa = '';
+
+            result = (primeiroT + ultimoT) / 2;
+            document.write(result);
+        }
+    </script>
+</body>
+
+</html>

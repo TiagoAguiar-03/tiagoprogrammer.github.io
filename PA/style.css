@@ -1,0 +1,12 @@
+@charset "UTF-8";
+
+input {
+    width: 250px !important;
+    margin: auto;
+}
+footer {
+    position: absolute;
+    bottom: 0px;
+    left: 50%;
+    margin-left: -50px;
+}
