@@ -1,12 +1,18 @@
 @charset "UTF-8";
 
+* {
+    padding: 0px;
+    margin: 0px;
+}
+
+p {
+    text-align: center;
+}
+
 input {
     width: 250px !important;
     margin: auto;
 }
 footer {
-    position: absolute;
-    bottom: 0px;
-    left: 50%;
-    margin-left: -50px;
+    text-align: center;
 }
